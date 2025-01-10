@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"sledzior/routine_manager/api/handler"
 
-	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 func main() {
@@ -20,4 +20,5 @@ func main() {
 
 func addRoutes(server echo.Echo) {
 	server.GET("/", handler.Home)
+	server.GET("/tasks", handler.Tasks)
 }
